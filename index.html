@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Red Bricks</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  	<link rel="stylesheet" type="text/css" href="node_modules/fullpage/dist/jquery.fullPage.min.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="node_modules/gsap/TweenMax.js"></script> 
+	<script type="text/javascript" defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+	<script type="text/javascript" src="node_modules/fullpage/dist/jquery.fullPage.min.js"></script>
+</head>
+<style>
+	body,html{
+  padding: 0;
+  margin: 0;
+}
+
+* {
+     box-sizing: border-box;
+}
+@font-face {
+		font-family: 'mont';
+		src: url('montserrat-bold.ttf') format('truetype');
+	}
+#wrapper {
+     width: 100%;
+	 z-index: -999;
+}
+
+
+.gsapSlider {
+     overflow: hidden;
+     position: relative;
+}
+
+.gsap-slides {
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     overflow: hidden;
+	 opacity: 0;
+     
+}
+li {
+          width: 100%;
+          background-size: cover;
+     }
+
+.gsap-nav {
+     padding: 10px;
+     position: absolute;
+     bottom: 10px;
+     left: 0;
+     width: 100%;
+    
+}
+ ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+        
+     }
+	  
+	#homeTitle{
+		position: absolute;
+		opacity:1;
+		z-index: 100;
+	}	 
+	#second{
+		background:url(images/sativa/sativa.png);
+		 background-repeat: repeat;
+	}  
+	#third{
+		background:url(images/old_moon/old_moon.png);
+		 background-repeat: repeat;
+	}
+	#fourth{
+		background:url(images/fresh_snow/fresh_snow.png);
+		 background-repeat: repeat;
+	}
+	footer{
+		position: absolute;
+	}
+		
+              
+</style>
+
+<body>
+	<!-- <header class="bg-light-silver fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+		<nav class="f6 fw6 ttu tracked">
+			<a class="link dim white dib mr3" href="#" title="Home">Home</a>
+			<a class="link dim white dib mr3" href="#" title="About">About</a>
+			<a class="link dim white dib mr3" href="#" title="Store">Store</a>
+			<a class="link dim white dib" href="#" title="Contact">Contact</a>
+		</nav>
+	</header> -->
+
+	<div id="fullpage">
+		<div class="section active fp-auto-height-responsive"  data-anchor="firstPage" >
+			<div id="wrapper">
+				<section class="flex-ns vh-100 items-center dt w-100" id="homeTitle">
+					<div class="dtc v-mid tc black tl-ns ph4-1">
+						<h1 class="f3 f1-l tc fw2 mb3 mt4 mt0-ns ph7 ">Hello, I'm Mayuri Sodani</h1>
+						<h2 class="f5 f3-l tc fw1 mb4 mb5-l lh-title ph6">A self driven and customer oriented professional with experience in web design, marketing and development of high traffic
+							websites having rich experience of 2 years.</h2>
+				
+					</div>
+				</section>
+			</div>
+			
+			
+		
+		</div>
+		<div class="section fp-auto-height-responsive" id="second"  data-anchor="secondPage">
+			<div class="mw9 center ph3-ns">
+				<div class="cf ph2-ns">
+					<div class="fl w-100 w-25-ns pa2">
+						<div class=" tc pv4">
+							<article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+								<div class="tc">
+									<img src="http://tachyons.io/img/avatar_1.jpg" class="br-100 h3 w3 dib" title="Photo of a kitty staring at you">
+									<h1 class="f4">Mayuri Sodani</h1>
+									<hr class="mw3 bb bw1 b--black-10">
+								</div>
+								<p class="lh-copy measure center f6 black-70">
+									Love, Patience, Faith, Virtue and Courage.
+								</p>
+							</article>
+						</div>
+					</div>
+					<div class="fl w-third w-25-ns pa2">
+						<div class=" tc pv4">
+							<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
+								<h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">About</h1>
+								<div class="pa3 bt b--black-10 bg-white">
+									<p class="f6 f5-ns lh-copy measure">
+										I am fascinated with the Wide Field Architecture Operates in the limitless process from Philosophy, Politics, and Economy, into a physical built spatial experience.
+									<br>
+									Winston Churchill once emphasised the fact that "We shape our buildings, thereafter they shape us".
+									<br>
+									</p>
+								</div>
+							</article>
+							<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
+								<h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Achievements</h1>
+								<div class="pa3 bt b--black-10 bg-white">
+									<p class="f6 f5-ns lh-copy measure">
+										CGPA - 7.8
+									<br>
+									</p>
+									<p class="f6 f5-ns lh-copy measure">
+										CGPA - 7.8
+									<br>
+									</p>
+									<p class="f6 f5-ns lh-copy measure">
+										CGPA - 7.8
+									<br>
+									</p>
+								</div>
+							</article>
+									
+							
+						</div>
+					</div>
+					<div class="fl w-third w-25-ns pa2">
+						<div class=" tc pv4">
+							<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
+								<h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Education</h1>
+								<div class="pa3 bt b--black-10 bg-white">
+									<p class="f6 f5-ns lh-copy measure">
+										Malviya Natiional Institute of Technology, Jaipur
+										<br> 
+										<br>
+									</p>
+									<p class="f6 f5-ns lh-copy measure">
+										Malviya Natiional Institute of Technology, Jaipur
+										<br> 
+										<br>
+									</p>
+								</div>
+							</article>
+							<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
+								<h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Internship</h1>
+								<div class="pa3 bt b--black-10 bg-white">
+									<p class="f6 f5-ns lh-copy measure">
+										Living Form Architects,
+										<br>
+										Banglore 
+										<br>
+									</p>
+									<p class="f6 f5-ns lh-copy measure">
+										Malviya Natiional Institute of Technology, Jaipur
+										<br> 
+										<br>
+									</p>
+								</div>
+							</article>
+							<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
+								<h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Skills</h1>
+								<div class="pa3 bt b--black-10 bg-white">
+									<p class="f6 f5-ns lh-copy measure">
+										Autocad
+										<br>
+										Photoshop 
+										<br>
+										Autocad
+										<br>
+										Photoshop 
+										<br>
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="fl w-third w-25-ns pa2">
+						<div class="  tc pv4">
+							<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
+								<h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Strength</h1>
+								<div class="pa3 bg-white bt b--black-10">
+									<p class="f6 f5-ns lh-copy measure">
+										People Oriented
+										<br> Team Player
+										<br> PR
+										<br> Creative
+										<br>
+									</p>
+								</div>
+							</article>
+							<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
+								<h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Interest</h1>
+								<div class="pa3 bg-white bt b--black-10">
+									<p class="f6 f5-ns lh-copy measure">
+										Travelling
+										<br> Reading
+										<br> Photography
+										<br> Cycling
+										<br>
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section fp-auto-height-responsive" id="third" data-anchor="thirdPage">
+			<div class="slide" data-anchor="slide1" > 
+				<section class="ph6-l">
+					<h1 class="tc f5 ttu fw6 tracked mb4 avenir">Other Projects</h1>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hw-080411-cargo_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden  ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hwspringtour-cargo_960-1.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/cc010611.s_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-100 w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/adam-stern-031209_960-2.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/zh170311.4.cargo_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hw090911_960.jpg);"></div>
+					</a>
+				</section>
+			</div>
+			<div class="slide" data-anchor="slide2"> 
+				<section class="ph6-l">
+					<h1 class="tc f5 ttu fw6 tracked mb4 avenir">Other Projects</h1>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hw-080411-cargo_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden  ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hwspringtour-cargo_960-1.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/cc010611.s_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-100 w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/adam-stern-031209_960-2.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/zh170311.4.cargo_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hw090911_960.jpg);"></div>
+					</a>
+				</section>
+			</div>
+			<div class="slide" data-anchor="slide3"> 
+				<section class="ph6-l">
+					<h1 class="tc f5 ttu fw6 tracked mb4 avenir">Other Projects</h1>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hw-080411-cargo_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden  ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hwspringtour-cargo_960-1.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/cc010611.s_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-100 w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/adam-stern-031209_960-2.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/zh170311.4.cargo_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hw090911_960.jpg);"></div>
+					</a>
+				</section>
+			</div>
+			<div class="slide" data-anchor="slide4">
+				<section class="ph6-l">
+					<h1 class="tc f5 ttu fw6 tracked mb4 avenir">Other Projects</h1>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hw-080411-cargo_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden  ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hwspringtour-cargo_960-1.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/cc010611.s_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-100 w-25-ns border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-top pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/adam-stern-031209_960-2.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/zh170311.4.cargo_960.jpg);"></div>
+					</a>
+					<a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+						<div class="grow cover bg-center pv5 pv6-l" style="background-image:url(https://s3-us-west-2.amazonaws.com/prnt/hw090911_960.jpg);"></div>
+					</a>
+				</section>
+			</div>
+		
+		</div>
+		<div class="section fp-auto-height-responsive" id="fourth" data-anchor="fourthPage">
+			<article>
+				<h2 class="f3 fw4 pa3 mv0">Albums</h2>
+				<div class="cf pa2">
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png"
+							 alt="Frank Ocean Blonde Album Cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">Blonde</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Frank Ocean</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/jeffery/id1146718343?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is1.mzstatic.com/image/thumb/Music71/v4/c8/2d/b1/c82db1cd-9dc5-d7cb-2a34-735cf47bb809/source/400x40000bb.png"
+							 alt="Young Thug - Jeffery Album Cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100 ttu">Jeffery</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Young Thug</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/untitled-unmastered./id1089846273?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is5.mzstatic.com/image/thumb/Music49/v4/1b/36/43/1b3643c6-e6a3-41bc-7f6d-7c2b64b5d60b/source/400x40000bb.png"
+							 alt="Kendrick Lamar untitled unmastered. Album Cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">untitled umastered.</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Kendrick Lamar</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/99.9/id1092026376?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is4.mzstatic.com/image/thumb/Music49/v4/e9/4c/2d/e94c2d5f-bdb0-c565-4cc2-f9dfcf7f0b87/source/400x40000bb.png"
+							 alt="Kaytranada 99%" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">99%</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Kaytranada</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/aa/id1067924003?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is3.mzstatic.com/image/thumb/Music49/v4/b6/b0/a1/b6b0a1dd-998d-9786-ca2f-87470be15250/source/400x40000bb.png"
+							 alt="Baauer Aa - Album Cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">Aa</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Baauer</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/99-cents/id1054734475?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is3.mzstatic.com/image/thumb/Music62/v4/fa/ae/a6/faaea65f-0819-bb5d-afaa-4f5e84015204/source/400x40000bb.png"
+							 alt="Santigold 99 cents - Album cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">99 cents</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Santigold</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/a-moon-shaped-pool/id1111577743?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png"
+							 alt="A Moon Shaped Pool - Album cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">A Moon Shaped Pool</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Radiohead</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/the-life-of-pablo/id1123231885?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is3.mzstatic.com/image/thumb/Music20/v4/c0/98/d0/c098d05b-7bcc-0ea3-0213-0f69992fda65/source/400x40000bb.png"
+							 alt="The Life of Pablo - Album Cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">The Life of Pablo</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Kanye West</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/coloring-book/id1113239004?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is2.mzstatic.com/image/thumb/Music18/v4/5a/42/0f/5a420f73-6490-abc9-bdcc-3001d5c4e9fc/source/400x40000bb.png"
+							 alt="Coloring Book - Album cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">Coloring Book</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Chance the Rapper</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="fl w-50 w-25-m w-20-l pa2">
+						<a href="https://geo.itunes.apple.com/us/album/everybody-looking/id1135576036?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+							<img src="http://is4.mzstatic.com/image/thumb/Music30/v4/9b/2e/e1/9b2ee13e-35fd-0cc1-d203-e65b4beafc7f/source/400x40000bb.png"
+							 alt="Everybody Looking - Album Cover" class="w-100 db outline black-10" />
+							<dl class="mt2 f6 lh-copy">
+								<dt class="clip">Title</dt>
+								<dd class="ml0 black truncate w-100">Everybody Looking</dd>
+								<dt class="clip">Artist</dt>
+								<dd class="ml0 gray truncate w-100">Gucci Mane</dd>
+							</dl>
+						</a>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var images = ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/308348/gsap-1.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/308348/gsap-2.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/308348/gsap-3.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/308348/gsap-4.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/308348/gsap-5.jpg', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/308348/gsap-6.jpg'];
+
+			var wrapper = '#wrapper';
+
+
+			// GSAP SLIDER FUNCTION
+
+			function gsapSlider(imageArray, sliderWrapper, imageHeight, sliderID) {
+				// create unordered list in slider
+				$(sliderWrapper).append('<ul class="gsap-slides"></ul>').addClass('gsapSlider');
+
+				// create navigation
+				$(sliderWrapper).append('<div class="gsap-nav"><ul ></ul></div>');
+
+				// count number of images in array
+				var numberSlides = (imageArray.length);
+				// number in rotation, taking final 'clone' slide into consideration
+				var numberRotation = numberSlides + 1;
+				// create unique selector for slider
+				var slider = $(sliderWrapper + ' .gsap-slides');
+				// unique selector for each image li 
+				var image_li = $(sliderWrapper + ' .gsap-slides li');
+				var navigation = $('.gsap-nav ul');
+
+				for (var i = 0; i < (numberSlides); i++) {
+					// add each image as a li and set background image and height  
+					slider.append('<li style="background-image: url(' + imageArray[i] + '); height:' + imageHeight + ';"></li>');
+
+					navigation.append('<li class="nav-opt nav-' + (i + 1) + '" data-index="' + (i + 1) + '"></li>')
+
+				}
+
+				// add 'clone' to end - repeat of first slide
+				slider.append('<li style="background-image: url(' + imageArray[0] + '); height:' + imageHeight + ';"></li>');
+
+				// set width of slider
+				slider.css({
+					width: numberRotation * 100 + '%'
+				});
+
+				$('.nav-1').addClass('current');
+
+				// create timeline
+
+				var sliderID = new TimelineMax({ repeat: -1 });
+				var speed = 0.5;
+				var slideWidth = -100 / numberRotation;
+
+				for (var n = 1; n < numberRotation; n++) {
+					sliderID.addLabel('slide-' + n);
+					sliderID.to(slider, speed * 7, { opacity: 0.5 });
+					sliderID.set('.nav-' + n, { css: { className: '-=current' } });
+					sliderID.set('.nav-' + (n + 1), { css: { className: '+=current' } });
+					sliderID.to(slider, speed, { x: slideWidth * n + '%' });
+				}
+
+				// switch back to first slide
+				sliderID.set('.nav-' + numberSlides, { css: { className: '-=current' } });
+				sliderID.set('.nav-1', { css: { className: '+=current' } });
+				sliderID.set(slider, { x: '0%'});
+
+				// button functionality     
+				/*for(var b = 1; b <= numberSlides; b++){
+					   var navID = '.nav-' + b;
+					   
+					 
+					  $(navID).on("click", function(){
+						var tweenD = 0 + ((b - 1) * (100/(numberSlides + 1)));
+						sliderID.kill();
+						TweenMax.to(slider, 0.25, {
+						 x: -tweenD + '%'
+					});
+						$('.gsap-nav li').removeClass('current');
+						$(this).addClass('current');
+					 });
+					 
+					 
+				}*/
+
+				$('.nav-opt').click(function () {
+					var index = $(this).attr('data-index');
+					var tweenD = 0 + (index * (100 / (numberSlides + 1)));
+
+					sliderID.kill();
+					TweenMax.to(slider, 0.25, { xPercent: -tweenD });
+					$('.gsap-nav li').removeClass('current');
+					$(this).addClass('current');
+				});
+
+
+			} //end function
+
+
+
+
+
+			gsapSlider(images, wrapper, '100vh', 'tl-views');
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+				
+				
+			});
+		});
+	</script>
+</body>
+</html>
